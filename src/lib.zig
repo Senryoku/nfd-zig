@@ -1,5 +1,7 @@
 const std = @import("std");
-const c = @import("c.zig");
+const c = @cImport({
+    @cInclude("nfd.h");
+});
 const log = std.log.scoped(.nfd);
 
 pub const Error = error{
